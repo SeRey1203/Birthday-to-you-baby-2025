@@ -51,10 +51,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Happy Birthday! 🎉🎂</h1>
+	<h1>Happy Valentine's Day! 💖</h1>
         <div class="message-box">
-            <p id="birthday-message">Click the button to see your special birthday wish!</p>
-            <button onclick="generateMessage()">Get Wish</button>
+            <p id="love-message">រីករាយថ្ងៃខួបកំណើតអូនសម្លាញ់ចិត្តបង! ☀️</p>
+            <button onclick="nextMessage()">Click Me</button>
         </div>
         <div class="image-container">
             <img id="birthday-image" src="photo1.jpg" alt="Birthday Celebration">
@@ -72,9 +72,12 @@
                 { text: "Sending you love and warm wishes on your special day! ❤️", image: "photo6.jpg" },
                 { text: "Enjoy your birthday to the fullest! 🎉", image: "photo7.jpg" }
             ];
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById("birthday-message").innerText = messages[randomIndex].text;
-            document.getElementById("birthday-image").src = messages[randomIndex].image;
+
+        let index = 0;
+        function nextMessage() {
+            index = (index + 1) % messages.length;
+            document.getElementById("love-message").innerText = messages[index].text;
+            document.getElementById("love-image").src = messages[index].image;
         }
     </script>
 </body>
