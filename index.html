@@ -51,7 +51,7 @@
 </head>
 <body>
     <div class="container">
-	<h1>Happy Valentine's Day! 💖</h1>
+        <h1>Happy Birthday! 💖</h1>
         <div class="message-box">
             <p id="love-message">រីករាយថ្ងៃខួបកំណើតអូនសម្លាញ់ចិត្តបង! ☀️</p>
             <button onclick="nextMessage()">Click Me</button>
@@ -62,22 +62,21 @@
     </div>
 
     <script>
-        function generateMessage() {
-            const messages = [
-                { text: "Wishing you a day filled with love and joy! 🎈", image: "photo1.jpg" },
-                { text: "May your year be full of happiness and success! 🎊", image: "photo2.jpg" },
-                { text: "Happy Birthday! May all your dreams come true! 🎁", image: "photo3.jpg" },
-                { text: "You are special and loved! Have an amazing birthday! 🎂", image: "photo4.jpg" },
-                { text: "Cheers to another year of happiness and adventure! 🥂", image: "photo5.jpg" },
-                { text: "Sending you love and warm wishes on your special day! ❤️", image: "photo6.jpg" },
-                { text: "Enjoy your birthday to the fullest! 🎉", image: "photo7.jpg" }
-            ];
+        const messages = [
+            { text: "Wishing you a day filled with love and joy! 🎈", image: "photo1.jpg" },
+            { text: "May your year be full of happiness and success! 🎊", image: "photo2.jpg" },
+            { text: "Happy Birthday! May all your dreams come true! 🎁", image: "photo3.jpg" },
+            { text: "You are special and loved! Have an amazing birthday! 🎂", image: "photo4.jpg" },
+            { text: "Cheers to another year of happiness and adventure! 🥂", image: "photo5.jpg" },
+            { text: "Sending you love and warm wishes on your special day! ❤️", image: "photo6.jpg" },
+            { text: "Enjoy your birthday to the fullest! 🎉", image: "photo7.jpg" }
+        ];
 
         let index = 0;
         function nextMessage() {
             index = (index + 1) % messages.length;
             document.getElementById("love-message").innerText = messages[index].text;
-            document.getElementById("love-image").src = messages[index].image;
+            document.getElementById("birthday-image").src = messages[index].image;
         }
     </script>
 </body>
